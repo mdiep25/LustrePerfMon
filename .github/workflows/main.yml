@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install dependencies
       run: |
-        yum -y install python-devel python-dateutil PyYAML redhat-lsb git flex bison bzip2
+        yum -y install python-devel python-dateutil PyYAML redhat-lsb git flex bison bzip2 rpm-build
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build
       run: ./esmon_build
