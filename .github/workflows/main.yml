@@ -17,6 +17,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install dependencies
       run: |
+        yum -y install epel-release
         yum -y install python-devel python-dateutil PyYAML redhat-lsb git flex bison bzip2 rpm-build
         yum -y install libmodbus-devel mosquitto-devel riemann-c-client-devel ganglia-devel
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
