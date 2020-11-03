@@ -8,9 +8,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    container:
+      image: centos:7
+    timeout-minutes: 50
+  
     steps:
     - uses: actions/checkout@v2
     - name: Install dependencies
